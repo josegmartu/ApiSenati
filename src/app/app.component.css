@@ -1,0 +1,92 @@
+/* Estilo general de la página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000; /* Fondo negro puro */
+  color: #e0e0e0; /* Texto gris claro */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo del encabezado */
+.header-container {
+  background-color: #1e1e1e; /* Fondo gris oscuro para el encabezado */
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-container h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.header-container p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Contenedor general de las tarjetas */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilo de cada tarjeta */
+.movie-container {
+  background-color: #1e1e1e; /* Fondo gris oscuro para las tarjetas */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.movie-container:hover {
+  transform: scale(1.05); /* Efecto hover */
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1); /* Sombra más clara en hover */
+}
+
+/* Imagen del póster */
+.movie-container img {
+  width: 100%;
+  height: 300px; /* Fija una altura para uniformidad */
+  object-fit: cover; /* Ajuste de imagen */
+  border-bottom: 2px solid #e50914; /* Línea roja inferior */
+}
+
+/* Título de la película */
+.movie-container h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #fff; /* Blanco puro para el título */
+}
+
+/* Fecha de lanzamiento */
+.movie-container .date {
+  font-size: 1em;
+  color: #b0b0b0; /* Texto gris más claro */
+  margin-bottom: 5px;
+}
+
+/* Precio */
+.movie-container .price {
+  font-size: 1.1em;
+  color: #e50914; /* Texto rojo */
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
